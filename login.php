@@ -25,10 +25,24 @@ ob_end_flush();
 	?>
 </head>
 
+<style type="text/css">
+#bg-gif {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://cdn.dribbble.com/users/1973278/screenshots/6998323/hospital.gif');
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+</style>
 <body>
-	
+	<div id="bg-gif"></div>
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('login/images/bg-01.jpg');">
+		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form id="login100-form">
 					<span class="login100-form-title p-b-49">

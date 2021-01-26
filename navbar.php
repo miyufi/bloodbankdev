@@ -3,9 +3,6 @@
 	.collapse a{
 		text-indent:10px;
 	}
-	nav#sidebar{
-		/*background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>) !important*/
-	}
 </style>
 
 <nav id="sidebar" class='mx-lt-5 bg-danger' >
@@ -18,7 +15,6 @@
 				<a href="index.php?page=handedovers" class="nav-item nav-handedovers"><span class='icon-field'><i class="fa fa-toolbox text-danger"></i></span> Handed Over</a>
 				<?php if($_SESSION['login_type'] == 1): ?>
 				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users text-danger"></i></span> Users</a>
-				<!-- <a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs text-danger"></i></span> System Settings</a> -->
 			<?php endif; ?>
 		</div>
 

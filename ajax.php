@@ -8,18 +8,8 @@ if($action == 'login'){
 	if($login)
 		echo $login;
 }
-if($action == 'login2'){
-	$login = $crud->login2();
-	if($login)
-		echo $login;
-}
 if($action == 'logout'){
 	$logout = $crud->logout();
-	if($logout)
-		echo $logout;
-}
-if($action == 'logout2'){
-	$logout = $crud->logout2();
 	if($logout)
 		echo $logout;
 }
@@ -33,27 +23,11 @@ if($action == 'delete_user'){
 	if($save)
 		echo $save;
 }
-if($action == 'signup'){
-	$save = $crud->signup();
-	if($save)
-		echo $save;
-}
-if($action == 'update_account'){
-	$save = $crud->update_account();
-	if($save)
-		echo $save;
-}
-if($action == "save_settings"){
-	$save = $crud->save_settings();
-	if($save)
-		echo $save;
-}
 if($action == "save_donor"){
 	$save = $crud->save_donor();
 	if($save)
 		echo $save;
 }
-
 if($action == "delete_donor"){
 	$delete = $crud->delete_donor();
 	if($delete)
@@ -69,7 +43,6 @@ if($action == "delete_donation"){
 	if($save)
 		echo $save;
 }
-
 if($action == "save_request"){
 	$save = $crud->save_request();
 	if($save)

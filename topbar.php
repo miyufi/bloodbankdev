@@ -16,6 +16,7 @@
   		
   		</div>
       <div class="col-md-4 float-left text-white">
+        <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
         <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
       </div>
 	  	<div class="float-right">

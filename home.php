@@ -6,43 +6,15 @@
     right: 1rem;
     top: 0;
 }
-.imgs{
-		margin: .5em;
-		max-width: calc(100%);
-		max-height: calc(100%);
-	}
-	.imgs img{
-		max-width: calc(100%);
-		max-height: calc(100%);
-		cursor: pointer;
-	}
-	#imagesCarousel,#imagesCarousel .carousel-inner,#imagesCarousel .carousel-item{
-		height: 60vh !important;background: black;
-	}
-	#imagesCarousel .carousel-item.active{
-		display: flex !important;
-	}
-	#imagesCarousel .carousel-item-next{
-		display: flex !important;
-	}
-	#imagesCarousel .carousel-item img{
-		margin: auto;
-	}
-	#imagesCarousel img{
-		width: auto!important;
-		height: auto!important;
-		max-height: calc(100%)!important;
-		max-width: calc(100%)!important;
-	}
 </style>
 
-<div class="containe-fluid">
+<div>
 	<div class="row mt-3 ml-3 mr-3">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <?php echo "Welcome back ". $_SESSION['login_name']."!"  ?>
-                    <hr>
+                    <h3 style="margin-bottom: 0px;"><?php echo "Welcome back ". $_SESSION['login_name']."!"  ?></h3>
+                    <hr style="border-top: 1px solid white;">
                     <h4><b>Available Blood per group in Liters</b></h4>
                     <div class="row">
                         <?php 
@@ -64,11 +36,11 @@
                         <?php foreach ($blood_group as $v): ?>
                         <div class="col-md-3 mb-3">
                             <div class="card">
-                                <div class="card-body bg-light">
-                                    <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <?php echo $v ?> <i class="fa fa-tint text-danger"></i></span>
-                                        <h4><b>
-                                            <?php echo ($bg_inn[$v] - $bg_out[$v]) / 1000 ?>
+                                <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
+                                    <div class="card-body text-light">
+                                        <h4 class="float-right summary_icon" style="font-size: 30px; margin-bottom: 0px;"> <?php echo $v ?> <i class="fa fa-tint text-danger"></i></h4>
+                                        <h4 style="color: white; font-size: 30px; margin-bottom: 0px;"><b>
+                                            <?php echo ($bg_inn[$v] - $bg_out[$v]) / 1000 ?>L
                                         </b></h4>
                                     </div>
                                 </div>
@@ -76,13 +48,13 @@
                         </div>
                     <?php endforeach; ?>
                     </div>	
-                    <hr>
+                    <hr style="border-top: 1px solid white;">
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <div class="card">
-                                <div class="card-body bg-light">
-                                    <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-user-friends text-primary "></i></span>
+                                <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
+                                    <div class="card-body text-light">
+                                        <span class="float-right summary_icon"> <i class="fa fa-user-friends text-danger "></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM donors")->num_rows ?>
                                         </b></h4>
@@ -93,8 +65,8 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card">
-                                <div class="card-body bg-light">
-                                    <div class="card-body text-dark">
+                                <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
+                                    <div class="card-body text-light">
                                         <span class="float-right summary_icon"> <i class="fa fa-notes-medical text-danger "></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM blood_inventory where status = 1 and date(date_created) = '".date('Y-m-d')."' ")->num_rows ?>
@@ -106,8 +78,8 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card">
-                                <div class="card-body bg-light">
-                                    <div class="card-body text-dark">
+                                <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
+                                    <div class="card-body text-light">
                                         <span class="float-right summary_icon"> <i class="fa fa-th-list text-danger"></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM requests where date(date_created) = '".date('Y-m-d')."' ")->num_rows ?>
@@ -119,9 +91,9 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="card">
-                                <div class="card-body bg-light">
-                                    <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-check text-primary "></i></span>
+                                <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
+                                    <div class="card-body text-light">
+                                        <span class="float-right summary_icon"> <i class="fa fa-check text-danger "></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM requests where date(date_created) = '".date('Y-m-d')."' and status = 1 ")->num_rows ?>
                                         </b></h4>

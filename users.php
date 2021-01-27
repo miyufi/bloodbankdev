@@ -1,8 +1,6 @@
-<?php 
+<?php include('db_connect.php');?>
 
-?>
-
-<div class="container-fluid">
+<div>
 	
 	<div class="row">
 	<div class="col-lg-12">

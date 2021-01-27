@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="login/images/icons/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     <?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?>
@@ -71,33 +71,6 @@
         <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
         <?php include $page.'.php' ?>
       </div>
-    </div>
-  </div>
-
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Background</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger background-color">
-            <div class="badge-colors text-center">
-              <span class="badge filter badge-primary active" data-color="primary"></span>
-              <span class="badge filter badge-blue" data-color="blue"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="adjustments-line text-center color-change">
-          <span class="color-label">LIGHT MODE</span>
-          <span class="badge light-badge mr-2"></span>
-          <span class="badge dark-badge ml-2"></span>
-          <span class="color-label">DARK MODE</span>
-        </li>
-      </ul>
     </div>
   </div>
 
@@ -247,44 +220,6 @@ window._conf = function($msg='',$func='',$params = []){
 
       window_width = $(window).width();
 
-      fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-
-
-      $('.fixed-plugin a').click(function(event) {
-        // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
-        if ($(this).hasClass('switch-trigger')) {
-          if (event.stopPropagation) {
-            event.stopPropagation();
-          } else if (window.event) {
-            window.event.cancelBubble = true;
-          }
-        }
-      });
-
-      $('.fixed-plugin .background-color span').click(function() {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-
-        var new_color = $(this).data('color');
-
-        if ($sidebar.length != 0) {
-          $sidebar.attr('data-color', new_color);
-        }
-
-        if ($navbar.length != 0) {
-          $navbar.attr('data-color', new_color);
-        }
-
-        if ($full_page.length != 0) {
-          $full_page.attr('filter-color', new_color);
-        }
-
-        if ($sidebar_responsive.length != 0) {
-          $sidebar_responsive.attr('data-color', new_color);
-        }
-      });
-
       $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
         var $btn = $(this);
 
@@ -309,37 +244,6 @@ window._conf = function($msg='',$func='',$params = []){
         }, 1000);
       });
 
-      $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
-        var $btn = $(this);
-
-        if (white_color == true) {
-
-          $('body').addClass('change-background');
-          setTimeout(function() {
-            $('body').removeClass('change-background');
-            $('body').removeClass('white-content');
-          }, 900);
-          white_color = false;
-        } else {
-
-          $('body').addClass('change-background');
-          setTimeout(function() {
-            $('body').removeClass('change-background');
-            $('body').addClass('white-content');
-          }, 900);
-
-          white_color = true;
-        }
-
-      });
-
-      $('.light-badge').click(function() {
-        $('body').addClass('white-content');
-      });
-
-      $('.dark-badge').click(function() {
-        $('body').removeClass('white-content');
-      });
     });
   });
 </script> 

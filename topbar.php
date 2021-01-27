@@ -28,7 +28,7 @@
             <b class="caret d-none d-lg-block d-xl-block"></b>
             <p class="d-lg-none">
             <div class="photo">
-              <img src="../assets/img/anime3.png">
+              <img src="panel/assets/img/anime3.png">
             </div>           
             </p>
           </a>

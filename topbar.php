@@ -1,35 +1,51 @@
-<style>
-	.logo {
-    margin: auto;
-    font-size: 20px;
-    background: white;
-    padding: 7px 11px;
-    border-radius: 50% 50%;
-    color: #000000b3;
-}
-</style>
+<!-- topbar.php -->
 
-<nav class="navbar navbar-light fixed-top bg-danger" style="padding:0;min-height: 3.5rem">
-  <div class="container-fluid mt-2 mb-2">
-  	<div class="col-lg-12">
-  		<div class="col-md-1 float-left" style="display: flex;">
-  		
-  		</div>
-      <div class="col-md-4 float-left text-white">
-        <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
-        <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
+<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent   ">
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <div class="navbar-toggle d-inline">
+        <button type="button" class="navbar-toggler">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
       </div>
-	  	<div class="float-right">
-        <div class=" dropdown mr-4">
-            <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
-              <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
-                <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
-              </div>
+      <p class="navbar-brand"><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></p>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav ml-auto ">
+        <div class="search-bar input-group">
         </div>
-      </div>
+        <p style="float: right; text-align: right; width: 100%; margin-top: 6%;"><?php echo $_SESSION['login_name'] ?></p>
+        <li class="dropdown nav-item">
+
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <b class="caret d-none d-lg-block d-xl-block"></b>
+            <p class="d-lg-none">
+            <div class="photo">
+              <img src="../assets/img/anime3.png">
+            </div>           
+            </p>
+          </a>
+          <ul class="dropdown-menu dropdown-navbar">
+            <li class="nav-link">
+              <a href="javascript:void(0)" class="nav-item dropdown-item" id="manage_my_account">Manage Account</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-link">
+              <a href="ajax.php?action=logout" class="nav-item dropdown-item">Logout</a>
+            </li>
+          </ul>
+        </li>
+        <li class="separator d-lg-none"></li>
+      </ul>
+    </div>
   </div>
-  
 </nav>
 
 <script>
@@ -37,3 +53,4 @@
     uni_modal("Manage Account","manage_user.php?id=<?php echo $_SESSION['login_id'] ?>&mtype=own")
   })
 </script>
+

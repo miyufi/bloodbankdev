@@ -108,7 +108,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-th-list "></i></span>
+                                        <span class="float-right summary_icon"> <i class="fa fa-th-list text-danger"></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM requests where date(date_created) = '".date('Y-m-d')."' ")->num_rows ?>
                                         </b></h4>

@@ -90,9 +90,9 @@
         <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
-      </div>
     </div>
   </div>
+</div>
   <div class="modal fade" id="uni_modal" role='dialog'>
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">

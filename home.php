@@ -13,7 +13,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h3 style="margin-bottom: 0px;"><?php echo "Welcome back ". $_SESSION['login_name']."!"  ?></h3>
+                    <h4 style="margin-bottom: 0px;"><?php echo "Welcome back ". $_SESSION['login_name']."!"  ?></h4>
                     <hr style="border-top: 1px solid white;">
                     <h4><b>Available Blood per group in Liters</b></h4>
                     <div class="row">

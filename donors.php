@@ -18,7 +18,7 @@
 							<th class="">Donor</th>
 							<th class="">Blood Group</th>
 							<th class="">Information</th>
-							<th class="">Previuos Donation</th>
+							<th class="">Previous Donation</th>
 							<th class="text-center">Action</th>
 						</tr>
 					</thead>

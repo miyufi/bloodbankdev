@@ -7,6 +7,13 @@ foreach($qry->fetch_array() as $k => $val){
 }
 }
 ?>
+
+<style type="text/css">
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+</style>
 <div class="container-fluid">
 	<form action="" id="manage-donation">
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
@@ -26,12 +33,12 @@ foreach($qry->fetch_array() as $k => $val){
 		</div>
 		<div class="form-group">
 	        <label for="" class="control-label">Blood Group</label>
-			<input type="text" class="form-control" name="blood_group"  value="<?php echo isset($blood_group) ? $blood_group :'' ?>" required readonly>
+			<input type="text" class="form-control" style="color: rgba(255, 255, 255, 0.8);" name="blood_group"  value="<?php echo isset($blood_group) ? $blood_group :'' ?>" required readonly>
 			
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Volume (ml)</label>
-			<input type="number" class="form-control text-right" step="any" name="volume"  value="<?php echo isset($volume) ? $volume :'' ?>" required>
+			<input type="number" class="form-control" step="any" name="volume"  value="<?php echo isset($volume) ? $volume :'' ?>" required>
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Date of Transfusion/Donation</label>

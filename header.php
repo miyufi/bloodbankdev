@@ -7,9 +7,10 @@
 <!-- Nucleo Icons -->
 <link href="panel/assets/css/nucleo-icons.css" rel="stylesheet" /> 
 <!-- CSS Files -->
-<link href="panel/assets/css/bootstrap.min.css" rel="stylesheet" />
-<link href="panel/assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+<link href="panel/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="panel/assets/css/black-dashboard.css" rel="stylesheet" />
 
+<link type="text/css" rel="stylesheet" href="assets/css/jquery-te-1.4.0.css">
 <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
@@ -17,9 +18,9 @@
 <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-<link href="assets/DataTables/datatables.min.css" rel="stylesheet">
+<link href="assets/DataTables/datatables.css" rel="stylesheet">
 <link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
-<link href="assets/css/select2.min.css" rel="stylesheet">
+<link href="assets/css/select2.css" rel="stylesheet">
 
 <!--   Core JS Files   -->
 <script src="panel/assets/js/core/jquery.min.js"></script>
@@ -29,6 +30,7 @@
 <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="panel/assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/DataTables/datatables.min.js"></script>
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>

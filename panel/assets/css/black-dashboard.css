@@ -1624,8 +1624,8 @@ fieldset[disabled] .btn-link.active {
 }
 
 .form-control {
-  border-color: #2b3553;
-  background-color: transparent;
+  border-color: white;
+  background-color: #1e1e2d;
   border-radius: 0.4285rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: normal;
@@ -1641,7 +1641,7 @@ fieldset[disabled] .btn-link.active {
 
 .form-control:focus {
   border-color: #e14eca;
-  background: transparent;
+  background: #1e1e2d;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0 !important;
@@ -1695,7 +1695,7 @@ fieldset[disabled] .btn-link.active {
 .has-success .input-group-append .input-group-text,
 .has-success .input-group-prepend .input-group-text,
 .has-success .form-control {
-  border-color: #2b3553;
+  border-color: white;
 }
 
 .has-success .form-control:focus,
@@ -1926,7 +1926,7 @@ fieldset[disabled] .btn-link.active {
 .input-group-append .input-group-text,
 .input-group-prepend .input-group-text {
   background-color: transparent;
-  border: 1px solid #2b3553;
+  border: 1px solid white;
   border-radius: 0.4285rem;
   color: #FFFFFF;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -2040,7 +2040,7 @@ fieldset[disabled] .btn-link.active {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   background-color: #1d253b;
-  color: #344675;
+  color: rgba(255, 255, 255, 0.8);
   cursor: not-allowed;
 }
 
@@ -2063,7 +2063,7 @@ textarea.form-control {
   padding: 10px 10px 0 0;
   resize: none;
   border: none;
-  border-bottom: 1px solid #2b3553;
+  border-bottom: 1px solid white;
   border-radius: 0;
   line-height: 2;
 }
@@ -4970,7 +4970,7 @@ table.tablesorter thead tr .headerSortDown {
 .card-user .avatar {
   width: 124px;
   height: 124px;
-  border: 5px solid #2b3553;
+  border: 5px solid white;
   border-bottom-color: transparent;
   position: relative;
 }

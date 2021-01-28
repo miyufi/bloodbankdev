@@ -32,7 +32,7 @@ foreach($qry->fetch_array() as $k => $val){
 
 		<div class="form-group">
 			<label for="" class="control-label">Available Volume (L)</label>
-			<input type="number" class="form-control text-right" step="any" name="avolume"  value="0" readonly="">
+			<input type="number" class="form-control" step="any" name="avolume"  value="0" readonly="">
 		</div>
 
 		<div class="form-group">

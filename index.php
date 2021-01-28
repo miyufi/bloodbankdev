@@ -56,6 +56,18 @@
   max-height: calc(100%);
   max-width: calc(100%);
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #1e1e2d inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+}
+
 </style>
 
 <body class=" ">

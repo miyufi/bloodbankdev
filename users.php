@@ -1,71 +1,58 @@
 <?php include('db_connect.php');?>
 
 <div>
-	
-	<div class="row">
-	<div class="col-lg-12">
-			<button class="btn btn-primary float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> New user</button>
-	</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="card col-lg-12">
+	<!-- Table Panel -->
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header">
+				<b>List of Users</b>
+				<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_user">
+			<i class="fa fa-plus"></i> New Entry
+		</a></span>
+			</div>
 			<div class="card-body">
-				<table class="table-striped table-bordered col-md-12">
-			<thead>
-				<tr>
-					<th class="text-center">#</th>
-					<th class="text-center">Name</th>
-					<th class="text-center">Username</th>
-					<th class="text-center">Type</th>
-					<th class="text-center">Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
- 					include 'db_connect.php';
- 					$type = array("","Admin","Staff","Alumnus/Alumna");
- 					$users = $conn->query("SELECT * FROM users order by name asc");
- 					$i = 1;
- 					while($row= $users->fetch_assoc()):
-				 ?>
-				 <tr>
-				 	<td class="text-center">
-				 		<?php echo $i++ ?>
-				 	</td>
-				 	<td>
-				 		<?php echo ucwords($row['name']) ?>
-				 	</td>
-				 	
-				 	<td>
-				 		<?php echo $row['username'] ?>
-				 	</td>
-				 	<td>
-				 		<?php echo $type[$row['type']] ?>
-				 	</td>
-				 	<td>
-				 		<center>
-								<div class="btn-group">
-								  <button type="button" class="btn btn-primary">Action</button>
-								  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								    <span class="sr-only">Toggle Dropdown</span>
-								  </button>
-								  <div class="dropdown-menu">
-								    <a class="dropdown-item edit_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Edit</a>
-								    <div class="dropdown-divider"></div>
-								    <a class="dropdown-item delete_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Delete</a>
-								  </div>
-								</div>
-								</center>
-				 	</td>
-				 </tr>
-				<?php endwhile; ?>
-			</tbody>
-		</table>
+				<table class="table table-condensed table-bordered table-hover">
+					<thead>
+						<tr>
+							<th class="text-center">#</th>
+							<th class="">Name</th>
+							<th class="">Username</th>
+							<th class="">Type</th>
+							<th class="text-center">Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+		 					$type = array("","Admin","Staff");
+		 					$users = $conn->query("SELECT * FROM users order by name asc");
+		 					$i = 1;
+		 					while($row= $users->fetch_assoc()):
+						 ?>
+						<tr>
+							<td class="text-center">
+						 		<?php echo $i++ ?>
+						 	</td>
+							<td class="">
+						 		<?php echo ucwords($row['name']) ?>
+						 	</td>
+							<td class="">
+								 <?php echo $row['username'] ?>
+							</td>
+							<td class="">
+								 <?php echo $type[$row['type']] ?>
+							</td>
+							<td class="text-center">
+								<button class="btn btn-sm btn-outline-primary edit_user" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+								<button class="btn btn-sm btn-outline-danger delete_user" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+							</td>
+						</tr>
+						<?php endwhile; ?>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
-
+	<!-- Table Panel -->
 </div>
 <script>
 	$('table').dataTable();

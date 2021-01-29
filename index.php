@@ -82,6 +82,7 @@ input:-webkit-autofill {
       <div class="content">
         <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
         <?php include $page.'.php' ?>
+
       </div>
     </div>
   </div>
@@ -126,6 +127,7 @@ input:-webkit-autofill {
     </div>
   </div>
 </body>
+
 
 <script>
    window.start_load = function(){

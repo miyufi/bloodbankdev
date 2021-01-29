@@ -54,7 +54,7 @@
                             <div class="card">
                                 <div class="card-body" style="background: linear-gradient(#1e1e2f, #1e1e24)">
                                     <div class="card-body text-light">
-                                        <span class="float-right summary_icon"> <i class="fa fa-user-friends text-primary "></i></span>
+                                        <span class="float-right summary_icon"> <i class="fa fa-user-friends text-danger "></i></span>
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM donors")->num_rows ?>
                                         </b></h4>

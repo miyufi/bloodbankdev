@@ -10,6 +10,7 @@
           <p>Home</p>
         </a>
       </li>
+      <?php if($_SESSION['login_type'] == 1 || $_SESSION['login_type'] == 2): ?>
       <li id="donors">
         <a href="index.php?page=donors" class="nav-item nav-donors">
           <i class="tim-icons icon-satisfied"></i>
@@ -34,6 +35,7 @@
           <p>Handed Over</p>
         </a>
       </li>
+      <?php endif; ?>
       <?php if($_SESSION['login_type'] == 1): ?>
       <li id="users">
         <a href="index.php?page=users" class="nav-item nav-users">

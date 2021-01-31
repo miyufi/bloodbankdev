@@ -1,5 +1,12 @@
 <?php include('db_connect.php');?>
 
+<?php
+  if(isset($_SESSION['login_type']) && $_SESSION["login_type"] != 1) {
+  echo '<font color = white>You do not have access to this page.</font>';
+      exit();
+  }
+ ?>
+
 <div>
 	<!-- Table Panel -->
 	<div class="col-md-12">
@@ -23,7 +30,7 @@
 					</thead>
 					<tbody>
 						<?php
-		 					$type = array("","Admin","Staff");
+		 					$type = array("","Admin","Staff","Guest");
 		 					$users = $conn->query("SELECT * FROM users order by name asc");
 		 					$i = 1;
 		 					while($row= $users->fetch_assoc()):

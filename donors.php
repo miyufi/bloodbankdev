@@ -1,5 +1,12 @@
 <?php include('db_connect.php');?>
 
+<?php
+  	if(isset($_SESSION["login_type"]) && ($_SESSION["login_type"] != 1 && $_SESSION["login_type"] != 2)) {
+  		echo '<font color = white>You do not have access to this page.</font>';
+      exit();
+  	}
+ ?> 
+
 <div>
 	<!-- Table Panel -->
 	<div class="col-md-12">

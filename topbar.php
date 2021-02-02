@@ -19,17 +19,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="navbar-nav ml-auto ">
-        <div class="search-bar input-group">
-        </div>
         <p style="float: right; text-align: right; width: 100%; margin-top: 6%;"><?php echo $_SESSION['login_name'] ?></p>
         <li class="dropdown nav-item">
-
-          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-            <b class="caret d-none d-lg-block d-xl-block"></b>
-            <p class="d-lg-none">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
             <div class="photo">
               <img src="panel/assets/img/anime3.png">
-            </div>           
+            </div> 
+            <b class="caret d-none d-lg-block d-xl-block"></b>
+            <p class="d-lg-none">
+              Logout
             </p>
           </a>
           <ul class="dropdown-menu dropdown-navbar">

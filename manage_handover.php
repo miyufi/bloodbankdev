@@ -55,9 +55,9 @@ foreach($qry->fetch_array() as $k => $val){
                     if(resp.status == 1){
                         var _html = '';
                         _html += '<input type="hidden" name="request_id" value="'+resp.data.id+'">';
-                        _html += '<p>Patient: '+resp.data.id+'<b></b></p>';
+                        _html += '<p>Patient: '+resp.data.patient+'<b></b></p>';
                         _html += '<p>Blood Group: '+resp.data.blood_group+'<b></b></p>';
-                        _html += '<p>Volume Needed: '+resp.data.volumeL+' L<b></b></p>';
+                        _html += '<p>Volume Needed: '+resp.data.volumeL+'L<b></b></p>';
                         _html += '<p>Physician: '+resp.data.physician_name+'<b></b></p>';
                         $('#request_details').html(_html)
                         $('[name="picked_up_by"]').parent().show()

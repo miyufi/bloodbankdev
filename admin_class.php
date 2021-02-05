@@ -52,7 +52,7 @@ Class Action {
 		$data .= ", password = '".md5($password)."' ";
 		if(!empty($type))
 		$data .= ", type = '$type' ";
-		$chk = $this->db->query("select * from users where username = '$username' and id !='$id' ")->num_rows;
+		$chk = $this->db->query("SELECT * from users where username = '$username' and id !='$id' ")->num_rows;
 		if($chk > 0){
 			return 2;
 			exit;

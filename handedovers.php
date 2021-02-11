@@ -84,7 +84,9 @@
 </style>
 <script>
 	$(document).ready(function(){
-		$('table').dataTable()
+		$('table').dataTable( {
+			"oSearch": {"bSmart": false}
+		})
 	})
 	
 	$('#new_handover').click(function(){

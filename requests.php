@@ -91,7 +91,9 @@
 </style>
 <script>
 	$(document).ready(function(){
-		$('table').dataTable()
+		$('table').dataTable( {
+			"oSearch": {"bSmart": false}
+		})
 	})
 	
 	$('#new_request').click(function(){
